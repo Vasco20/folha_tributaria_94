@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha Tributária | Edição N.º 94 – Junho 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue-deep:   #0a1f44;
+      --blue-mid:    #1246a0;
+      --blue-light:  #1e5fcb;
+      --gold:        #f0a500;
+      --green:       #17b26a;
+      --red-soft:    #e04a4a;
+      --bg:          #f4f6fb;
+      --surface:     #ffffff;
+      --surface-2:   #eef2fa;
+      --text-primary:#0d1b38;
+      --text-muted:  #5a6a85;
+      --border:      #dde3ef;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 2px 8px rgba(10,31,68,.08);
+      --shadow-md:   0 6px 24px rgba(10,31,68,.12);
+      --font-head:   'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-body:   'Inter', -apple-system, sans-serif;
+      --max-w:       900px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body { background: var(--bg); color: var(--text-primary); font-family: var(--font-body); line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; min-height: 100vh; }
+    img { display: block; max-width: 100%; }
+    a { color: var(--blue-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { list-style: none; }
+
+    .nl-wrapper { max-width: var(--max-w); margin: 0 auto; background: var(--surface); box-shadow: var(--shadow-md); }
+
+    /* TOPBAR */
+    .nl-topbar { background: var(--blue-deep); display: flex; justify-content: space-between; align-items: center; padding: 12px 28px; font-family: var(--font-head); font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.65); }
+    .nl-topbar span { color: #fff; }
+
+    /* FEATURED HERO */
+    .featured-hero { display: flex; flex-direction: column; }
+    .featured-img-wrap { position: relative; overflow: hidden; background: var(--blue-deep); aspect-ratio: 16/9; }
+    .featured-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .featured-logo { position: absolute; top: 20px; left: 20px; display: flex; align-items: center; gap: 10px; background: rgba(10,31,68,.25); backdrop-filter: blur(8px) saturate(140%); -webkit-backdrop-filter: blur(8px) saturate(140%); border: 1px solid rgba(255,255,255,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 4px 16px rgba(0,0,0,.18); border-radius: 14px; padding: 10px 14px; }
+    .featured-logo img { height: 72px; width: auto; object-fit: contain; }
+    .featured-content { background: var(--blue-deep); padding: 32px 36px 40px; }
+    .featured-label { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); border-radius: 40px; padding: 4px 14px; font-family: var(--font-head); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .featured-title { font-family: var(--font-head); font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; color: #fff; line-height: 1.18; margin-bottom: 14px; }
+    .featured-desc { color: rgba(255,255,255,.68); font-size: .95rem; line-height: 1.6; margin-bottom: 26px; max-width: 520px; }
+    .featured-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--blue-light); color: #fff; font-family: var(--font-head); font-size: .85rem; font-weight: 600; padding: 11px 24px; border-radius: 6px; transition: background .2s, transform .15s; }
+    .featured-btn:hover { background: #1a52b8; transform: translateY(-1px); text-decoration: none; }
+    @media (max-width: 480px) { .featured-img-wrap { aspect-ratio: 4/3; } .featured-content { padding: 24px 20px 32px; } .featured-logo { top: 12px; left: 12px; padding: 7px 10px; } .featured-logo img { height: 52px; } }
+
+    /* SECTIONS */
+    .nl-section { padding: 40px 28px; }
+    .nl-section + .nl-section { border-top: 1px solid var(--border); }
+    .nl-section-title { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue-mid); margin-bottom: 28px; }
+    .nl-section-title::after { content: ''; flex: 1; height: 1.5px; background: var(--border); }
+
+    /* DESTAQUES GRID */
+    .destaques-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .destaques-grid .destaque-card { flex: 0 0 100%; }
+    @media (min-width: 480px) { .destaques-grid .destaque-card { flex: 0 0 calc(50% - 8px); } }
+    @media (min-width: 720px) { .destaques-grid .destaque-card { flex: 0 0 calc(33.333% - 11px); } }
+    .destaque-card { background: var(--surface-2); border-radius: var(--radius-md); padding: 20px 16px 22px; display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--border); transition: box-shadow .2s, transform .15s; }
+    .destaque-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .destaque-icon { width: 44px; height: 44px; background: var(--blue-mid); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.25rem; }
+    .destaque-card h3 { font-family: var(--font-head); font-size: .88rem; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+    .destaque-card p { font-size: .8rem; color: var(--text-muted); line-height: 1.5; flex: 1; }
+    .destaque-card a { font-family: var(--font-head); font-size: .75rem; font-weight: 600; color: var(--blue-light); display: inline-flex; align-items: center; gap: 4px; }
+    .destaque-card a:hover { text-decoration: underline; }
+    .destaques-grid .destaque-card:nth-child(n+4),
+    .triple-row .article-card:nth-child(n+4) { display: none; }
+
+    /* DUAL ROW */
+    .dual-row { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 40px 28px; }
+    @media (min-width: 540px) { .dual-row { grid-template-columns: 1fr 1fr; } }
+    .report-card { background: var(--blue-deep); border-radius: var(--radius-lg); padding: 28px 24px; color: #fff; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden; }
+    .report-card::after { content: ''; position: absolute; bottom: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(30,95,203,.3) 0%, transparent 70%); pointer-events: none; }
+    .badge { display: inline-block; font-family: var(--font-head); font-size: .65rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; }
+    .badge-blue   { background: var(--blue-light); color: #fff; }
+    .badge-gold   { background: var(--gold);       color: var(--blue-deep); }
+    .badge-green  { background: var(--green);      color: #fff; }
+    .report-card h2 { font-family: var(--font-head); font-size: clamp(1.15rem, 3vw, 1.45rem); font-weight: 800; line-height: 1.2; color: #fff; }
+    .report-card p  { font-size: .84rem; color: rgba(255,255,255,.75); }
+    .stat-number { font-family: var(--font-head); font-size: 3.4rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .stat-label  { font-family: var(--font-head); font-size: .72rem; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .07em; }
+    .stat-block  { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius-md); padding: 16px 20px; margin: 4px 0; }
+    .reform-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; }
+    .reform-card h2 { font-family: var(--font-head); font-size: clamp(1.15rem, 3vw, 1.4rem); font-weight: 800; color: var(--text-primary); line-height: 1.2; }
+    .reform-card .subtitle { font-family: var(--font-head); font-size: .88rem; font-weight: 600; color: var(--blue-mid); margin-top: -8px; }
+    .reform-card p { font-size: .84rem; color: var(--text-muted); }
+    .check-list { display: flex; flex-direction: column; gap: 10px; margin: 6px 0; }
+    .check-item { display: flex; align-items: flex-start; gap: 10px; font-size: .84rem; color: var(--text-primary); }
+    .check-item::before { content: '✓'; flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--green); color: #fff; font-size: .7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+
+    /* TRIPLE ROW */
+    .triple-row { padding: 0 28px 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .triple-row .article-card { flex: 0 0 100%; }
+    @media (min-width: 480px) { .triple-row .article-card { flex: 0 0 calc(50% - 8px); } }
+    @media (min-width: 720px) { .triple-row .article-card { flex: 0 0 calc(33.333% - 11px); } }
+    .article-card { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 22px 18px; display: flex; flex-direction: column; gap: 10px; transition: box-shadow .2s; }
+    .article-card:hover { box-shadow: var(--shadow-md); }
+    .article-card .badge { display: block; width: 100%; text-align: left; background: var(--blue-mid); color: #fff; padding: 6px 14px; }
+    .article-card .btn-secondary { width: 100%; justify-content: center; align-self: stretch; border-color: var(--blue-light); color: var(--blue-light); }
+    .article-card h3 { font-family: var(--font-head); font-size: .95rem; font-weight: 700; color: var(--text-primary); line-height: 1.25; }
+    .article-card p { font-size: .8rem; color: var(--text-muted); flex: 1; }
+    .article-subtitle { font-family: var(--font-head); font-size: .82rem; font-weight: 600; color: var(--blue-mid); margin: -4px 0 4px; line-height: 1.4; }
+    .articles-section { background: var(--surface-2); padding-top: 40px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+    /* BUTTONS */
+    .btn-primary   { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--blue-deep); font-family: var(--font-head); font-size: .85rem; font-weight: 700; padding: 13px 26px; border-radius: 40px; transition: opacity .2s, transform .15s; }
+    .btn-primary:hover { opacity: .88; transform: translateY(-1px); text-decoration: none; }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--blue-light); border: 1.5px solid var(--blue-light); font-family: var(--font-head); font-size: .82rem; font-weight: 600; padding: 10px 20px; border-radius: 40px; transition: background .2s, color .2s; }
+    .btn-secondary:hover { background: var(--blue-light); color: #fff; text-decoration: none; }
+    .btn-green  { border-color: var(--green)  !important; color: var(--green)  !important; align-self: flex-start; }
+    .btn-gold   { border-color: var(--gold)   !important; color: #a06c00       !important; align-self: flex-start; }
+    .btn-green:hover  { background: var(--green)  !important; color: #fff !important; }
+    .btn-gold:hover   { background: var(--gold)   !important; color: #fff !important; }
+
+    /* INFO ROW */
+    .info-row { padding: 40px 28px; display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 480px) { .info-row { grid-template-columns: 1fr 1fr; } }
+    .info-card { border-radius: var(--radius-md); padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
+    .info-card.green-tint { background: #edfaf4; border: 1px solid #b2e8cf; }
+    .info-card.gold-tint  { background: #fff9ee; border: 1px solid #f5d98a; }
+    .info-card-header { display: flex; align-items: center; gap: 8px; font-family: var(--font-head); font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+    .info-card.green-tint .info-card-header { color: #14855a; }
+    .info-card.gold-tint  .info-card-header { color: #a06c00; }
+    .info-card h3 { font-family: var(--font-head); font-size: .95rem; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+    .info-card p  { font-size: .82rem; color: var(--text-muted); }
+
+    /* VER MAIS */
+    .ver-mais-row { display: flex; justify-content: center; padding: 24px 0 8px; }
+
+    /* FOOTER */
+    .nl-footer { background: #060f24; padding: 36px 28px 24px; display: grid; grid-template-columns: 1fr; gap: 28px; }
+    @media (min-width: 480px) { .nl-footer { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    .footer-brand .brand-name { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: #fff; }
+    .footer-brand .brand-sub  { font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+    .footer-col-title { font-family: var(--font-head); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 12px; }
+    .footer-col a, .footer-col p { font-size: .8rem; color: rgba(255,255,255,.65); display: flex; align-items: flex-start; gap: 6px; margin-bottom: 7px; line-height: 1.4; }
+    .footer-col a:hover { color: #fff; text-decoration: none; }
+    .footer-col a .fi { font-size: .8rem; opacity: .7; }
+    .social-row { display: flex; gap: 10px; margin-top: 4px; }
+    .social-btn { display: inline-flex; transition: opacity .2s, transform .15s; }
+    .social-btn img { width: 32px; height: 32px; object-fit: contain; }
+    .social-btn:hover { opacity: .75; transform: translateY(-2px); text-decoration: none; }
+    .nl-footer-bottom { background: #060f24; border-top: 1px solid rgba(255,255,255,.08); padding: 16px 28px; display: flex; flex-direction: column; gap: 4px; align-items: center; text-align: center; }
+    @media (min-width: 480px) { .nl-footer-bottom { flex-direction: row; justify-content: space-between; } }
+    .nl-footer-bottom p { font-size: .73rem; color: rgba(255,255,255,.35); }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: var(--border); margin: 0 28px; }
+    .mt-auto { margin-top: auto; }
+
+    /* IVM banner */
+    .ivm-banner { background: linear-gradient(135deg, #eef4ff 0%, #ddeaff 100%); border: 1px solid #c0d4f7; margin: 40px 28px 40px; border-radius: var(--radius-md); padding: 28px 24px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .ivm-banner-text h3 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 800; color: var(--blue-mid); margin-bottom: 6px; }
+    .ivm-banner-text p  { font-size: .88rem; color: var(--text-muted); }
+    .ivm-banner-icon { font-size: 2.5rem; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<div class="nl-wrapper">
+
+  <!-- TOPBAR -->
+  <header class="nl-topbar">
+    <span>Folha Tributária | Edição N.º 94</span>
+    <span>Junho 2026</span>
+  </header>
+
+  <!-- FEATURED HERO -->
+  <section class="featured-hero">
+    <div class="featured-img-wrap">
+      <img class="featured-img"
+           src="image/capa-folha.webp"
+           alt="Capa da Folha Tributária N.º 94"
+           onerror="this.style.opacity='0'" />
+      <div class="featured-logo">
+        <img src="imag/agt-logo.webp" alt="AGT" />
+      </div>
+    </div>
+    <div class="featured-content">
+      <div class="featured-label">★ FACTUKANDA · Educação Fiscal</div>
+      <h1 class="featured-title">FACTUKANDA: Formar os Contribuintes de Amanhã</h1>
+      <p class="featured-desc">Quase seis mil crianças participaram na segunda edição da Cidade dos Kandengues Tributários. Justinho, o Assistente Virtual da AGT via WhatsApp. As principais iniciativas e avanços da AGT resumidos numa leitura rápida.</p>
+      <a class="featured-btn" href="#" target="_blank">Ler edição completa &rarr;</a>
+    </div>
+  </section>
+
+  <!-- DESTAQUES DO MÊS -->
+  <section class="nl-section">
+    <div class="nl-section-title"><span>✦</span> Destaques do Mês</div>
+    <div class="destaques-grid">
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🎓</div>
+        <h3>FACTUKANDA reúne 5 992 crianças</h3>
+        <p>A Cidade dos Kandengues Tributários recebeu crianças de 72 escolas em Icolo e Bengo, numa experiência pedagógica sobre cidadania fiscal.</p>
+        <a href="factukanda.html">Saiba mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🏗️</div>
+        <h3>Novo Centro Logístico Aduaneiro inaugurado</h3>
+        <p>Com um investimento de 6,8 mil milhões de kwanzas, o novo CLA em Icolo e Bengo reforça a eficiência aduaneira e o comércio externo.</p>
+        <a href="centro-logistico.html">Saiba mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">💼</div>
+        <h3>Workshop sobre Incentivos Fiscais em Luanda</h3>
+        <p>FMI e AFRITAC Sul reuniram especialistas africanos para debater transparência, avaliação e governação dos benefícios fiscais.</p>
+        <a href="workshop-incentivos.html">Saiba mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">💻</div>
+        <h3>Portal do Contribuinte — avanços e desafios</h3>
+        <p>Contribuintes reconhecem a comodidade dos serviços digitais da AGT e sugerem melhorias no desempenho e alargamento das funcionalidades.</p>
+        <a href="voz-contribuinte.html">Saiba mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">⚽</div>
+        <h3>V Encontro Inter-Regional Tributário</h3>
+        <p>Luanda acolheu o V Encontro Inter-Regional Tributário da AGT, com colaboradores de todo o País em modalidades desportivas e recreativas.</p>
+        <a href="agt-desporto.html">Saiba mais &rarr;</a>
+      </div>
+
+    </div>
+    <div class="ver-mais-row">
+      <a class="btn-secondary" href="destaques-mes.html">Ver todos os destaques &rarr;</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- REPORTAGEM PRINCIPAL + REFORMA EM FOCO -->
+  <div class="dual-row">
+
+    <article class="report-card">
+      <span class="badge badge-blue">Reportagem Principal</span>
+      <h2>Novo Centro Logístico Aduaneiro reforça a competitividade</h2>
+      <p>Inaugurado pelo Secretário de Estado para as Finanças e Tesouro, o complexo integra áreas administrativas, armazéns, scanner móvel e Brigada Cinotécnica.</p>
+      <div class="stat-block">
+        <div class="stat-number">6,8 Mrd</div>
+        <div class="stat-label">Kwanzas investidos no novo CLA</div>
+      </div>
+      <a class="btn-primary" href="centro-logistico.html" style="align-self:flex-start; margin-top:6px;">
+        Ler reportagem completa &rarr;
+      </a>
+    </article>
+
+    <article class="reform-card">
+      <span class="badge badge-gold">Reforma em Foco</span>
+      <h2>Novo IRPS</h2>
+      <div class="subtitle">Do sistema cedular ao unitário</div>
+      <p>Angola prepara a transição para um imposto único sobre rendimentos singulares, unificando IRT, IAC, IPR e outros em apenas um diploma jurídico.</p>
+      <ul class="check-list">
+        <li class="check-item">Sistema tributário mais simples e moderno</li>
+        <li class="check-item">Alargamento da base tributária</li>
+        <li class="check-item">Redução da complexidade burocrática</li>
+      </ul>
+      <a class="btn-secondary mt-auto" href="irps-cedular.html" style="align-self:flex-start;">Entender o IRPS &rarr;</a>
+    </article>
+
+  </div>
+
+  <!-- TRÊS ARTIGOS -->
+  <section class="articles-section">
+    <div class="triple-row">
+
+      <article class="article-card">
+        <span class="badge badge-blue">Grande Entrevista</span>
+        <h3>Agostinho Kapaia — Fiscalidade, Indústria e o Futuro</h3>
+        <p class="article-subtitle">Grupo OPAIA · Fundado em 2002</p>
+        <p>O empresário angolano fala sobre o papel do sector privado, a conformidade tributária e as metas do Grupo OPAIA para os próximos anos.</p>
+        <a class="btn-secondary mt-auto" href="entrevista-kapaia.html">Ler entrevista &rarr;</a>
+      </article>
+
+      <article class="article-card">
+        <span class="badge">A Minha Opinião</span>
+        <h3>O "Azedume" das Declarações Fiscais Indevidamente Zeradas</h3>
+        <p class="article-subtitle">Dr.º Benjamim Dumba · 6.º SRT</p>
+        <p>As declarações indevidamente zeradas violam o princípio da verdade declarativa e podem configurar infracção tributária com multas severas.</p>
+        <a class="btn-secondary mt-auto" href="declaracoes-zeradas.html">Ler mais &rarr;</a>
+      </article>
+
+      <article class="article-card">
+        <span class="badge badge-gold">Psicologia do Dinheiro</span>
+        <h3>Bater na Parede ou Terapia Financeira?</h3>
+        <p class="article-subtitle">Fátima Sampaio Fernandes · Psicóloga da Saúde</p>
+        <p>Da tendência "bater na parede" à terapia financeira: como compreender o comportamento financeiro e construir uma relação saudável com o dinheiro.</p>
+        <a class="btn-secondary mt-auto" href="psicologia-dinheiro.html">Ler dicas &rarr;</a>
+      </article>
+
+      <article class="article-card">
+        <span class="badge">A Voz do Contribuinte</span>
+        <h3>Portal do Contribuinte: Avanços Reconhecidos, Desafios Identificados</h3>
+        <p>Utilizadores destacam a comodidade e facilidade de acesso, mas defendem melhorias no desempenho e alargamento das funcionalidades disponíveis.</p>
+        <a class="btn-secondary mt-auto" href="voz-contribuinte.html">Ler mais &rarr;</a>
+      </article>
+
+    </div>
+    <div class="ver-mais-row" style="padding: 0 28px 40px;">
+      <a class="btn-secondary" href="artigos-mais.html">Ver todos os artigos &rarr;</a>
+    </div>
+  </section>
+
+  <!-- SABIA QUE? + EDUCAÇÃO FINANCEIRA -->
+  <div class="info-row">
+
+    <div class="info-card green-tint">
+      <div class="info-card-header"><span>💡</span> Sabia que?</div>
+      <h3>Central de Apoio ao Contribuinte (CAC)</h3>
+      <p>A CAC facilita o contacto remoto entre a AGT e os contribuintes. Através do <strong>923 16 70 10</strong>, obtenha apoio tributário e aduaneiro sem precisar deslocar-se a uma repartição fiscal.</p>
+      <a class="btn-secondary btn-green" href="#">Saber mais &rarr;</a>
+    </div>
+
+    <div class="info-card gold-tint">
+      <div class="info-card-header"><span>📊</span> Educação Financeira</div>
+      <h3>Bater na parede ou terapia financeira?</h3>
+      <p>Por Fátima Sampaio Fernandes, Psicóloga da Saúde. Explore a diferença entre FOMO e JOMO e descubra estratégias para uma gestão financeira mais consciente e equilibrada.</p>
+      <a class="btn-secondary btn-gold" href="psicologia-dinheiro.html">Ver dicas &rarr;</a>
+    </div>
+
+  </div>
+
+  <!-- DADOS DE JUNHO 2026 -->
+  <section class="nl-section" style="background:var(--surface-2);">
+    <div class="nl-section-title"><span>📈</span> Dados de Junho 2026</div>
+    <div class="destaques-grid">
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🗓️</div>
+        <h3>Boletim do IVA</h3>
+        <p>Na importação, o valor arrecadado atingiu <strong>kz 52 430 146 738</strong>. Dados estatísticos do IVA relativos a Junho de 2026.</p>
+        <a href="dados-junho.html">Saber mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">📋</div>
+        <h3>Declarações Aduaneiras</h3>
+        <p><strong>41 223</strong> declarações aduaneiras submetidas nos distintos regimes aduaneiros em Junho de 2026.</p>
+        <a href="dados-junho.html">Saber mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🌐</div>
+        <h3>Comércio Externo</h3>
+        <p>Exportações de bens com aumento de <strong>30,4%</strong> face ao mesmo período de 2025, totalizando <strong>US$ 3 002 milhões</strong>.</p>
+        <a href="dados-junho.html">Saber mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🛢️</div>
+        <h3>Boletim do Petróleo</h3>
+        <p>Boletim Mensal de Tributação Especial elaborado pela Direcção dos Grandes Contribuintes (DGC) da AGT com notícias e tendências do sector.</p>
+        <a href="dados-junho.html">Saber mais &rarr;</a>
+      </div>
+
+    </div>
+    <div class="ver-mais-row">
+      <a class="btn-secondary" href="dados-junho.html">Ver todos os dados &rarr;</a>
+    </div>
+  </section>
+
+  <!-- IVM BANNER -->
+  <div class="ivm-banner">
+    <div class="ivm-banner-icon">🚗</div>
+    <div class="ivm-banner-text">
+      <h3>Imposto sobre os Veículos Motorizados (IVM)</h3>
+      <p>Saiba como desassociar qualquer veículo que já não se encontre em sua posse, a partir do Portal do Contribuinte. Mais informações em <strong>www.agt.minfin.gov.ao</strong>.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="nl-footer">
+
+      <div class="footer-brand footer-col">
+        <div class="brand-name">AGT</div>
+        <div class="brand-sub">Administração Geral<br>Tributária</div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Links Úteis</div>
+        <a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank"><span class="fi">→</span> Portal do Contribuinte</a>
+        <a href="https://www.agt.minfin.gov.ao" target="_blank"><span class="fi">→</span> Serviços Online</a>
+        <a href="#" target="_blank"><span class="fi">→</span> Resenha Legislativa 2026</a>
+        <a href="#" target="_blank"><span class="fi">→</span> Perguntas Frequentes</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Contactos</div>
+        <p><span>📞</span> Central de Apoio: +244 923 16 70 10</p>
+        <p><span>💬</span> Justinho (WhatsApp): +244 923 16 70 11</p>
+        <p><span>✉️</span> apoio.agt@minfin.gov.ao</p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">Siga-nos</div>
+        <div class="social-row">
+          <a class="social-btn" href="https://www.facebook.com/AGTAngola" target="_blank" aria-label="Facebook">
+            <img src="imag/facebook.webp" alt="Facebook" />
+          </a>
+          <a class="social-btn" href="https://www.linkedin.com/company/administra%C3%A7%C3%A3o-geral-tribut%C3%A1ria-agt/" target="_blank" aria-label="Instagram">
+            <img src="imag/instagram-circle.webp" alt="Instagram" />
+          </a>
+          <a class="social-btn" href="https://www.youtube.com/channel/UCPK5NFtJb7QJwOBF8TpM3ag/featured" target="_blank" aria-label="YouTube">
+            <img src="imag/youtube-circle.webp" alt="YouTube" />
+          </a>
+        </div>
+        <a href="https://www.agt.minfin.gov.ao" target="_blank" style="color:rgba(255,255,255,.65); font-size:.72rem; margin-top:10px; display:block;">www.agt.minfin.gov.ao</a>
+      </div>
+
+    </div>
+    <div class="nl-footer-bottom">
+      <p>© 2026 Administração Geral Tributária. Todos os direitos reservados.</p>
+      <p>Edição N.º 94 | Junho 2026 · Próxima edição: Julho 2026</p>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

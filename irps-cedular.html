@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do Sistema Cedular ao Unitário — IRPS | Folha Tributária N.º 94</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Plus Jakarta Sans',-apple-system,sans-serif;--fb:'Inter',-apple-system,sans-serif;--mx:780px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+    .page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+    .nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:100;}
+    .nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+    .nav-back:hover{color:#fff;text-decoration:none;}
+    .nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+    .nav-brand span{color:var(--go);}
+    .hero{background:linear-gradient(150deg,#050f26 0%,#0a1f44 50%,#0b2860 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(36,120,255,.15) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;}
+    .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#ffd06b;margin-bottom:24px;}
+    .kicker-dot{width:6px;height:6px;border-radius:50%;background:#ffd06b;animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:580px;}
+    .hero h1 em{font-style:normal;color:var(--go);}
+    .hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;}
+    .art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:32px;}
+    .art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+    .art-meta-item strong{color:rgba(255,255,255,.85);}
+    .art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+    .body{padding:48px 40px 56px;}
+    h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+    h2:first-child{margin-top:0;}
+    .h2i{width:30px;height:30px;border-radius:6px;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+    p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+    @media(max-width:540px){.compare-grid{grid-template-columns:1fr;}}
+    .compare-col{border-radius:14px;padding:22px 20px;}
+    .compare-col.cedular{background:#fff5e0;border:1px solid #f5d38c;}
+    .compare-col.unitario{background:#edfaf4;border:1px solid #b2e8cf;}
+    .compare-col-label{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px;}
+    .compare-col.cedular .compare-col-label{color:#a36e00;}
+    .compare-col.unitario .compare-col-label{color:#14855a;}
+    .compare-col ul{display:flex;flex-direction:column;gap:8px;}
+    .compare-col li{font-size:.88rem;color:var(--tp);display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
+    .compare-col.cedular li::before{content:'•';color:#a36e00;font-weight:700;flex-shrink:0;}
+    .compare-col.unitario li::before{content:'✓';color:var(--gn);font-weight:700;flex-shrink:0;}
+    .pullquote{background:linear-gradient(135deg,var(--bd) 0%,#0d2d6b 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
+    .pullquote::before{content:'"';position:absolute;top:-20px;left:20px;font-family:var(--fh);font-size:9rem;font-weight:800;color:rgba(255,255,255,.05);line-height:1;}
+    .pullquote p{color:rgba(255,255,255,.88);font-size:1rem;position:relative;z-index:1;margin-bottom:14px;font-style:italic;}
+    .pullquote cite{display:block;font-style:normal;font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--go);position:relative;z-index:1;}
+    .profile-badge{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:18px;}
+    .profile-avatar{width:56px;height:56px;border-radius:50%;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+    .profile-name{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--tp);}
+    .profile-role{font-family:var(--fh);font-size:.72rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
+    .info-box{background:var(--s2);border:1px solid var(--br);border-left:4px solid var(--bm);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+    .info-box-title{font-family:var(--fh);font-size:.75rem;font-weight:700;color:var(--bm);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;}
+    .info-box ul{display:flex;flex-direction:column;gap:6px;}
+    .info-box li{font-size:.9rem;color:var(--tp);display:flex;align-items:flex-start;gap:8px;}
+    .info-box li::before{content:'▸';color:var(--bm);font-size:.75rem;margin-top:2px;flex-shrink:0;}
+    .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .art-footer-brand span{color:rgba(255,255,255,.8);}
+    .art-footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;transition:color .2s;}
+    .art-footer-links a:hover{color:#fff;text-decoration:none;}
+    .back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+    .back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--bm);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s,transform .15s;}
+    .back-btn:hover{background:var(--bl);transform:translateY(-1px);text-decoration:none;}
+    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html">&#8592; Página Inicial</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 94</span></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>Reforma Fiscal · Junho 2026</div>
+      <h1>Do Sistema Cedular<br>ao <em>Unitário:</em><br>A Reforma do IRPS</h1>
+      <p class="hero-lead">Angola avança na transição para um modelo de tributação do rendimento pessoal mais equitativo, progressivo e moderno — uma reforma que coloca o contribuinte no centro do sistema fiscal.</p>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Autor</strong> Klisman Bongue</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Tema</strong> Reforma do IRPS</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 94 · Junho 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+    <div class="profile-badge">
+      <div class="profile-avatar">📝</div>
+      <div>
+        <div class="profile-name">Klisman Bongue</div>
+        <div class="profile-role">Artigo de Opinião — Folha Tributária N.º 94</div>
+      </div>
+    </div>
+
+    <h2><span class="h2i">📚</span> O ponto de partida: o sistema cedular</h2>
+    <p>O Imposto sobre o Rendimento das Pessoas Singulares (IRPS) de Angola estrutura-se, na sua concepção original, em torno de um modelo cedular. Neste sistema, cada categoria de rendimento — trabalho dependente, trabalho independente, rendimentos de capitais, rendimentos prediais — é tributada de forma autónoma, com tabelas e regras próprias, independentemente da situação global do contribuinte.</p>
+    <p>Embora este modelo apresente vantagens em termos de simplicidade administrativa e facilidade de retenção na fonte, a experiência angolana e a comparação com outras jurisdições revelam limitações estruturais: contribuintes com rendimentos de múltiplas fontes podem suportar cargas fiscais distintas, mesmo tendo capacidade contributiva equivalente.</p>
+
+    <h2><span class="h2i">⚖️</span> Cedular vs. Unitário</h2>
+
+    <div class="compare-grid">
+      <div class="compare-col cedular">
+        <div class="compare-col-label">Sistema Cedular</div>
+        <ul>
+          <li>Cada categoria de rendimento tributada de forma independente</li>
+          <li>Taxas fixas por categoria</li>
+          <li>Simplicidade na retenção na fonte</li>
+          <li>Pode gerar desigualdade entre contribuintes</li>
+          <li>Menor capacidade de progressividade global</li>
+        </ul>
+      </div>
+      <div class="compare-col unitario">
+        <div class="compare-col-label">Sistema Unitário</div>
+        <ul>
+          <li>Todos os rendimentos agregados numa base tributável única</li>
+          <li>Progressividade efectiva sobre o rendimento total</li>
+          <li>Maior equidade entre contribuintes com capacidade equivalente</li>
+          <li>Melhor enquadramento das deduções e despesas familiares</li>
+          <li>Maior complexidade administrativa</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2><span class="h2i">🚀</span> A reforma em curso</h2>
+    <p>A transição para um sistema unitário, ou para um modelo misto com forte componente de tributação global, representa uma das reformas mais ambiciosas do sistema fiscal angolano. A sua implementação implica uma profunda revisão do Código do IRPS, a criação de mecanismos eficazes de declaração anual de rendimentos, a modernização dos sistemas informáticos de liquidação e o reforço das capacidades de auditoria da Administração Geral Tributária.</p>
+    <p>A reforma assenta em três pilares fundamentais: equidade, simplificação e modernização. O objectivo é construir um sistema em que cada contribuinte seja tributado de acordo com a sua efectiva capacidade económica, independentemente da forma como os seus rendimentos se distribuem pelas diferentes categorias.</p>
+
+    <div class="pullquote">
+      <p>A reforma do IRPS é, acima de tudo, uma oportunidade de construir um sistema fiscal mais justo — em que a carga tributária reflicta a capacidade real de cada contribuinte e não apenas a natureza da fonte de rendimento.</p>
+      <cite>Klisman Bongue — Artigo de Opinião, Folha Tributária N.º 94</cite>
+    </div>
+
+    <h2><span class="h2i">🔭</span> Desafios e perspectivas</h2>
+    <p>A transição para um modelo unitário ou misto exige uma preparação cuidadosa. É fundamental garantir que os contribuintes compreendem as novas regras, que os sistemas informáticos estão preparados para suportar a liquidação global dos rendimentos e que os técnicos da AGT dispõem das competências necessárias para acompanhar e fiscalizar o novo modelo.</p>
+    <p>A modernização do IRPS é, em última instância, um contributo decisivo para a consolidação de um Estado fiscal moderno — capaz de mobilizar recursos de forma justa, eficiente e transparente, em benefício do desenvolvimento sustentável de Angola.</p>
+
+    <div class="info-box">
+      <div class="info-box-title">Pontos-chave da reforma</div>
+      <ul>
+        <li>Transição do modelo cedular para um sistema de tributação global do rendimento</li>
+        <li>Maior progressividade e equidade na distribuição da carga fiscal</li>
+        <li>Revisão do Código do IRPS e actualização das tabelas e deduções</li>
+        <li>Modernização dos sistemas de declaração e liquidação</li>
+        <li>Reforço das capacidades da AGT para auditoria e acompanhamento</li>
+      </ul>
+    </div>
+  </main>
+
+  <div class="back-btn-wrap">
+    <a class="back-btn" href="index.html">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="art-footer">
+    <div class="art-footer-brand">Folha Tributária · <span>Edição N.º 94 | Junho 2026</span></div>
+    <div class="art-footer-links">
+      <a href="index.html">Início</a>
+      <a href="incentivos-internacionais.html">Incentivos Fiscais</a>
+      <a href="declaracoes-zeradas.html">Declarações Zeradas</a>
+      <a href="https://www.agt.minfin.gov.ao" target="_blank">AGT Online</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

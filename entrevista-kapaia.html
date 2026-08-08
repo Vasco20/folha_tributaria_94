@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grande Entrevista — Agostinho Kapaia | Folha Tributária N.º 94</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Plus Jakarta Sans',-apple-system,sans-serif;--fb:'Inter',-apple-system,sans-serif;--mx:780px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+    .page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+    .nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:100;}
+    .nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+    .nav-back:hover{color:#fff;text-decoration:none;}
+    .nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+    .nav-brand span{color:var(--go);}
+    .hero{background:linear-gradient(150deg,#050f26 0%,#0a1f44 50%,#0b2860 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(36,120,255,.15) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;}
+    .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#ffd06b;margin-bottom:24px;}
+    .kicker-dot{width:6px;height:6px;border-radius:50%;background:#ffd06b;animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:560px;}
+    .hero h1 em{font-style:normal;color:var(--go);}
+    .hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;margin-bottom:36px;}
+    .art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:32px;}
+    .art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+    .art-meta-item strong{color:rgba(255,255,255,.85);}
+    .art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+    .body{padding:48px 40px 56px;}
+    .qa-block{margin-bottom:36px;border-bottom:1px solid var(--br);padding-bottom:32px;}
+    .qa-block:last-child{border-bottom:none;}
+    .question{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--bm);margin-bottom:14px;line-height:1.4;}
+    .answer{font-size:.97rem;color:var(--tp);line-height:1.75;}
+    .answer p{margin-bottom:14px;}
+    .answer p:last-child{margin-bottom:0;}
+    .answer ul{margin:12px 0 14px 20px;display:flex;flex-direction:column;gap:8px;}
+    .answer ul li{font-size:.95rem;color:var(--tp);line-height:1.6;}
+    .pullquote{background:linear-gradient(135deg,var(--bd) 0%,#0d2d6b 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
+    .pullquote::before{content:'"';position:absolute;top:-20px;left:20px;font-family:var(--fh);font-size:9rem;font-weight:800;color:rgba(255,255,255,.05);line-height:1;}
+    .pullquote p{color:rgba(255,255,255,.88);font-size:1rem;position:relative;z-index:1;margin-bottom:0;font-style:italic;}
+    .profile-badge{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:18px;}
+    .profile-avatar{width:56px;height:56px;border-radius:50%;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+    .profile-name{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--tp);}
+    .profile-role{font-family:var(--fh);font-size:.72rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
+    .divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
+    .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
+    .divider span{width:8px;height:8px;border-radius:50%;background:var(--bm);opacity:.4;}
+    .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .art-footer-brand span{color:rgba(255,255,255,.8);}
+    .art-footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;transition:color .2s;}
+    .art-footer-links a:hover{color:#fff;text-decoration:none;}
+    .back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+    .back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--bm);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s,transform .15s;}
+    .back-btn:hover{background:var(--bl);transform:translateY(-1px);text-decoration:none;}
+    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html">&#8592; Página Inicial</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 94</span></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>Grande Entrevista · Junho 2026</div>
+      <h1>Agostinho Kapaia<br><em>Fiscalidade, Indústria</em><br>e o Futuro</h1>
+      <p class="hero-lead">O fundador e líder do Grupo OPAIA fala sobre mais de duas décadas de actividade empresarial em Angola, o papel do sector privado, a conformidade tributária e as perspectivas para o crescimento económico nacional.</p>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Entrevistado</strong> Agostinho Kapaia</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Empresa</strong> Grupo OPAIA (fundado em 2002)</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 94 · Junho 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+    <div class="profile-badge">
+      <div class="profile-avatar">👔</div>
+      <div>
+        <div class="profile-name">Agostinho Kapaia</div>
+        <div class="profile-role">Fundador e Líder do Grupo OPAIA · Angola, desde 2002</div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">O Grupo OPAIA nasceu em 2002. Como surgiu a ideia de criar este projecto empresarial e quais foram os maiores desafios nos primeiros anos de actividade?</div>
+      <div class="answer">
+        <p>A fundação do Grupo OPAIA coincidiu com um período de profunda transformação em Angola, marcado pelo fim de décadas de conflito e pelo início do processo de reconstrução nacional. A ideia surgiu da necessidade e do compromisso de participar activamente no desenvolvimento do País, contribuindo para colmatar lacunas existentes nos sectores das infra-estruturas, indústria e serviços.</p>
+        <p>Nos primeiros anos, os principais desafios estiveram relacionados com a escassez de infra-estruturas logísticas, a limitada disponibilidade de mão-de-obra especializada e as dificuldades de acesso ao financiamento. Foi necessário actuar com visão estratégica, resiliência e capacidade de adaptação para transformar um cenário desafiante em oportunidades concretas de crescimento e desenvolvimento.</p>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">Como avalia o actual ambiente de negócios em Angola e quais são as oportunidades que identifica para o empresariado nacional?</div>
+      <div class="answer">
+        <p>O ambiente de negócios em Angola encontra-se num processo contínuo de consolidação e transformação. Embora persistam alguns desafios, sobretudo relacionados com procedimentos administrativos e acesso ao financiamento, têm sido implementadas reformas importantes para melhorar o clima de investimento.</p>
+        <p>As principais oportunidades residem na industrialização, na substituição de importações, na agricultura e agro-indústria, nas energias renováveis e na inovação tecnológica. Os empresários que investirem na produção nacional, na criação de valor local e em soluções sustentáveis estarão melhor posicionados para aproveitar o potencial da economia angolana.</p>
+      </div>
+    </div>
+
+    <div class="pullquote">
+      <p>A conformidade tributária representa muito mais do que o simples cumprimento de uma obrigação legal. Trata-se de um compromisso com a transparência, a responsabilidade corporativa e a boa governação.</p>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">O cumprimento das obrigações fiscais é um dos pilares de uma economia organizada. Como é que o Grupo OPAIA encara a cultura de conformidade tributária?</div>
+      <div class="answer">
+        <p>Para o Grupo OPAIA, a conformidade tributária representa muito mais do que o simples cumprimento de uma obrigação legal. Trata-se de um compromisso com a transparência, a responsabilidade corporativa e a boa governação.</p>
+        <p>Num contexto cada vez mais globalizado, a credibilidade fiscal constitui um factor essencial para atrair investimento, estabelecer parcerias sólidas e garantir a sustentabilidade dos negócios. O cumprimento rigoroso das obrigações fiscais reforça a confiança dos parceiros, das instituições e da sociedade, contribuindo igualmente para o desenvolvimento económico do País.</p>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">Que medidas considera importantes para tornar o sistema tributário cada vez mais simples, previsível e favorável ao investimento privado?</div>
+      <div class="answer">
+        <p>A previsibilidade fiscal é um dos principais factores considerados pelos investidores na tomada de decisões. Neste sentido, algumas medidas importantes incluem:</p>
+        <ul>
+          <li>a) Garantir maior estabilidade das políticas fiscais a médio e longo prazo;</li>
+          <li>b) Simplificar procedimentos administrativos e reduzir a burocracia;</li>
+          <li>c) Reforçar a celeridade na resolução de processos tributários e contenciosos;</li>
+          <li>d) Alargar e aperfeiçoar os incentivos fiscais destinados aos sectores estratégicos;</li>
+          <li>e) Continuar a modernização das plataformas digitais de cumprimento das obrigações fiscais.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">Enquanto empresário angolano, que conselhos deixaria aos jovens que pretendem iniciar um negócio, sobretudo no que respeita à formalização e ao cumprimento das obrigações fiscais?</div>
+      <div class="answer">
+        <p>O meu principal conselho é que encarem a formalização do negócio como um investimento estratégico e não como um custo adicional. A formalização permite o acesso ao financiamento, aumenta a credibilidade da empresa, facilita a celebração de contratos com entidades públicas e privadas e cria condições para um crescimento sustentável.</p>
+        <p>O cumprimento das obrigações fiscais deve ser visto como parte integrante da gestão empresarial responsável. Empresas organizadas, transparentes e fiscalmente cumpridoras conquistam maior confiança do mercado e têm melhores possibilidades de crescimento e consolidação.</p>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">Quais são as principais metas do Grupo OPAIA para os próximos anos?</div>
+      <div class="answer">
+        <p>As principais metas passam pela consolidação do seu parque industrial, pelo reforço da produção nacional através de projectos estratégicos, como o Complexo Industrial de Fertilizantes (Amufert) e a OPAIA Motors, bem como pela liderança em iniciativas ligadas à inovação tecnológica, à mobilidade eléctrica e às soluções energéticas sustentáveis.</p>
+        <p>A mensagem que deixo aos empresários angolanos é clara: <em>a construção de uma economia forte, moderna e competitiva exige o compromisso de todos. A responsabilidade fiscal deve ser encarada como um dever cívico e empresarial, pois constitui um dos pilares do desenvolvimento nacional.</em></p>
+      </div>
+    </div>
+  </main>
+
+  <div class="back-btn-wrap">
+    <a class="back-btn" href="index.html">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="art-footer">
+    <div class="art-footer-brand">Folha Tributária · <span>Edição N.º 94 | Junho 2026</span></div>
+    <div class="art-footer-links">
+      <a href="index.html">Início</a>
+      <a href="declaracoes-zeradas.html">Opinião: Decl. Zeradas</a>
+      <a href="irps-cedular.html">IRPS</a>
+      <a href="https://www.agt.minfin.gov.ao" target="_blank">AGT Online</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

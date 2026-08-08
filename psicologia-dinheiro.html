@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bater na Parede ou Terapia Financeira? | Folha Tributária N.º 94</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Plus Jakarta Sans',-apple-system,sans-serif;--fb:'Inter',-apple-system,sans-serif;--mx:780px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+    .page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+    .nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:100;}
+    .nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+    .nav-back:hover{color:#fff;text-decoration:none;}
+    .nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+    .nav-brand span{color:var(--go);}
+    .hero{background:linear-gradient(150deg,#0a1f44 0%,#1a0a3a 60%,#220836 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(200,130,255,.1) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;}
+    .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(200,130,255,.1);border:1px solid rgba(200,130,255,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#e0aaff;margin-bottom:24px;}
+    .kicker-dot{width:6px;height:6px;border-radius:50%;background:#e0aaff;animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:580px;}
+    .hero h1 em{font-style:normal;color:#e0aaff;}
+    .hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;}
+    .art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:32px;}
+    .art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+    .art-meta-item strong{color:rgba(255,255,255,.85);}
+    .art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+    .body{padding:48px 40px 56px;}
+    h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+    h2:first-child{margin-top:0;}
+    .h2i{width:30px;height:30px;border-radius:6px;background:#7c3aed;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+    p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+    .profile-badge{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:18px;}
+    .profile-avatar{width:56px;height:56px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+    .profile-name{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--tp);}
+    .profile-role{font-family:var(--fh);font-size:.72rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
+    .pullquote{background:linear-gradient(135deg,#1a0a3a 0%,#2d1060 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
+    .pullquote::before{content:'"';position:absolute;top:-20px;left:20px;font-family:var(--fh);font-size:9rem;font-weight:800;color:rgba(255,255,255,.05);line-height:1;}
+    .pullquote p{color:rgba(255,255,255,.88);font-size:1rem;position:relative;z-index:1;margin-bottom:14px;font-style:italic;}
+    .pullquote cite{display:block;font-style:normal;font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#e0aaff;position:relative;z-index:1;}
+    .barrier-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0;}
+    @media(max-width:520px){.barrier-grid{grid-template-columns:1fr;}}
+    .barrier-card{background:var(--sf);border:1px solid var(--br);border-top:3px solid #7c3aed;border-radius:0 0 12px 12px;padding:18px 16px;}
+    .barrier-icon{font-size:1.4rem;margin-bottom:8px;}
+    .barrier-title{font-family:var(--fh);font-size:.88rem;font-weight:700;color:var(--tp);margin-bottom:8px;}
+    .barrier-card p{font-size:.82rem;color:var(--tm);margin:0;}
+    .therapy-steps{display:flex;flex-direction:column;gap:16px;margin:28px 0;}
+    .therapy-step{display:flex;gap:16px;align-items:flex-start;}
+    .therapy-num{width:34px;height:34px;border-radius:50%;background:#7c3aed;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:.85rem;font-weight:800;color:#fff;flex-shrink:0;}
+    .therapy-content-title{font-family:var(--fh);font-size:.92rem;font-weight:700;color:var(--tp);margin-bottom:4px;}
+    .therapy-content p{font-size:.88rem;color:var(--tm);margin:0;}
+    .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .art-footer-brand span{color:rgba(255,255,255,.8);}
+    .art-footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;transition:color .2s;}
+    .art-footer-links a:hover{color:#fff;text-decoration:none;}
+    .back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+    .back-btn{display:inline-flex;align-items:center;gap:9px;background:#7c3aed;color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s,transform .15s;}
+    .back-btn:hover{background:#6d28d9;transform:translateY(-1px);text-decoration:none;}
+    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html">&#8592; Página Inicial</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 94</span></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>Psicologia do Dinheiro · Junho 2026</div>
+      <h1>Bater na Parede<br>ou <em>Terapia</em><br><em>Financeira?</em></h1>
+      <p class="hero-lead">Fátima Sampaio Fernandes explora as barreiras emocionais e comportamentais que nos impedem de gerir o dinheiro de forma saudável — e como a terapia financeira pode transformar a nossa relação com as finanças pessoais.</p>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Autora</strong> Fátima Sampaio Fernandes</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Rubrica</strong> Psicologia do Dinheiro</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 94 · Junho 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+    <div class="profile-badge">
+      <div class="profile-avatar">🧠</div>
+      <div>
+        <div class="profile-name">Fátima Sampaio Fernandes</div>
+        <div class="profile-role">Psicologia do Dinheiro — Colunista da Folha Tributária N.º 94</div>
+      </div>
+    </div>
+
+    <h2><span class="h2i">🧱</span> Quando o dinheiro nos faz bater na parede</h2>
+    <p>Há um momento que muitos de nós conhecemos bem: aquele instante em que olhamos para a nossa conta bancária, percebemos que o salário acabou antes do mês, e sentimos uma espécie de paralisia. Não é preguiça. Não é irresponsabilidade. É, muitas vezes, o resultado de padrões emocionais e comportamentais profundamente enraizados que moldam a nossa relação com o dinheiro.</p>
+    <p>Bater na parede financeira — essa sensação de repetir os mesmos ciclos de endividamento, de incapacidade de poupar, de gastos impulsivos — é, frequentemente, um sintoma de questões mais profundas que vão muito além da matemática do orçamento pessoal.</p>
+
+    <div class="pullquote">
+      <p>O dinheiro não é apenas números numa conta. É memória, é identidade, é medo. Antes de mudarmos os nossos hábitos financeiros, precisamos de compreender as histórias que contamos a nós próprios sobre o dinheiro.</p>
+      <cite>Fátima Sampaio Fernandes — Psicologia do Dinheiro</cite>
+    </div>
+
+    <h2><span class="h2i">🔍</span> As barreiras emocionais mais comuns</h2>
+
+    <div class="barrier-grid">
+      <div class="barrier-card">
+        <div class="barrier-icon">😰</div>
+        <div class="barrier-title">Ansiedade financeira</div>
+        <p>O medo crónico de não ter dinheiro suficiente pode levar a decisões impulsivas, evitamento de contas e uma relação angustiada com as finanças.</p>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-icon">🛍️</div>
+        <div class="barrier-title">Consumo como regulação emocional</div>
+        <p>Gastar como forma de aliviar emoções negativas — stress, solidão, tristeza — cria um ciclo de alívio temporário seguido de culpa e maior pressão financeira.</p>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-icon">🚪</div>
+        <div class="barrier-title">Evitamento financeiro</div>
+        <p>Evitar olhar para extractos bancários, ignorar dívidas ou adiar decisões financeiras importantes como forma de reduzir a ansiedade associada.</p>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-icon">🔄</div>
+        <div class="barrier-title">Crenças limitantes herdadas</div>
+        <p>Mensagens recebidas na infância sobre o dinheiro — "dinheiro é fonte de conflito", "ricos são maus" — que continuam a influenciar o comportamento adulto.</p>
+      </div>
+    </div>
+
+    <h2><span class="h2i">💚</span> A terapia financeira como caminho</h2>
+    <p>A terapia financeira é uma abordagem relativamente recente que combina princípios da psicologia com conhecimentos de educação financeira. O seu objectivo não é apenas ensinar a gerir um orçamento, mas ajudar cada pessoa a compreender a dimensão emocional da sua relação com o dinheiro e a transformar padrões de comportamento que prejudicam o seu bem-estar financeiro.</p>
+
+    <div class="therapy-steps">
+      <div class="therapy-step">
+        <div class="therapy-num">1</div>
+        <div class="therapy-content">
+          <div class="therapy-content-title">Tomar consciência</div>
+          <p>O primeiro passo é identificar os padrões de comportamento financeiro recorrentes e as emoções que os desencadeiam.</p>
+        </div>
+      </div>
+      <div class="therapy-step">
+        <div class="therapy-num">2</div>
+        <div class="therapy-content">
+          <div class="therapy-content-title">Explorar as origens</div>
+          <p>Compreender de onde vêm as nossas crenças e medos em relação ao dinheiro — muitas vezes enraizados na infância e nas experiências familiares.</p>
+        </div>
+      </div>
+      <div class="therapy-step">
+        <div class="therapy-num">3</div>
+        <div class="therapy-content">
+          <div class="therapy-content-title">Reescrever a narrativa</div>
+          <p>Substituir crenças limitantes por perspectivas mais úteis e construtivas sobre a relação pessoal com o dinheiro.</p>
+        </div>
+      </div>
+      <div class="therapy-step">
+        <div class="therapy-num">4</div>
+        <div class="therapy-content">
+          <div class="therapy-content-title">Construir novos hábitos</div>
+          <p>Implementar práticas concretas de gestão financeira, apoiadas numa base emocional mais sólida e consciente.</p>
+        </div>
+      </div>
+      <div class="therapy-step">
+        <div class="therapy-num">5</div>
+        <div class="therapy-content">
+          <div class="therapy-content-title">Manter o equilíbrio</div>
+          <p>Cultivar uma relação saudável e equilibrada com o dinheiro a longo prazo, integrando o bem-estar emocional na gestão financeira quotidiana.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="h2i">✨</span> Pequenos passos, grandes mudanças</h2>
+    <p>Não é necessário esperar por uma crise financeira para começar. Pequenos gestos quotidianos — registar os gastos, criar um orçamento mensal, estabelecer uma reserva de emergência, reflectir sobre as emoções associadas às decisões de consumo — podem transformar gradualmente a relação com o dinheiro e contribuir para um maior bem-estar financeiro e emocional.</p>
+    <p>A educação financeira é fundamental, mas não é suficiente por si só. A consciência emocional é o complemento indispensável para construir finanças pessoais verdadeiramente saudáveis — e uma vida com mais liberdade, menos stress e mais equilíbrio.</p>
+  </main>
+
+  <div class="back-btn-wrap">
+    <a class="back-btn" href="index.html">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="art-footer">
+    <div class="art-footer-brand">Folha Tributária · <span>Edição N.º 94 | Junho 2026</span></div>
+    <div class="art-footer-links">
+      <a href="index.html">Início</a>
+      <a href="agt-desporto.html">AGT Desporto</a>
+      <a href="declaracoes-zeradas.html">Declarações Zeradas</a>
+      <a href="https://www.agt.minfin.gov.ao" target="_blank">AGT Online</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

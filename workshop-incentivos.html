@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workshop sobre Incentivos Fiscais | Folha Tributária N.º 94</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Plus Jakarta Sans',-apple-system,sans-serif;--fb:'Inter',-apple-system,sans-serif;--mx:780px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+    .page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+    .nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:100;}
+    .nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+    .nav-back:hover{color:#fff;text-decoration:none;}
+    .nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+    .nav-brand span{color:var(--go);}
+    .hero{background:linear-gradient(150deg,#050f26 0%,#0a1f44 50%,#0b2860 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(36,120,255,.15) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;}
+    .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#ffd06b;margin-bottom:24px;}
+    .kicker-dot{width:6px;height:6px;border-radius:50%;background:#ffd06b;animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:560px;}
+    .hero h1 em{font-style:normal;color:var(--go);}
+    .hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;margin-bottom:36px;}
+    .art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:32px;}
+    .art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+    .art-meta-item strong{color:rgba(255,255,255,.85);}
+    .art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+    .body{padding:48px 40px 56px;}
+    h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+    h2:first-child{margin-top:0;}
+    .h2i{width:30px;height:30px;border-radius:6px;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+    p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+    .principles-list{display:flex;flex-direction:column;gap:16px;margin:28px 0;}
+    .principle{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;}
+    .principle-num{font-family:var(--fh);font-size:1.6rem;font-weight:800;color:var(--bm);line-height:1;flex-shrink:0;min-width:36px;}
+    .principle-title{font-family:var(--fh);font-size:.95rem;font-weight:700;color:var(--tp);margin-bottom:6px;}
+    .principle p{font-size:.88rem!important;color:var(--tm)!important;margin:0!important;}
+    .pullquote{background:linear-gradient(135deg,var(--bd) 0%,#0d2d6b 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
+    .pullquote::before{content:'"';position:absolute;top:-20px;left:20px;font-family:var(--fh);font-size:9rem;font-weight:800;color:rgba(255,255,255,.05);line-height:1;}
+    .pullquote p{color:rgba(255,255,255,.88);font-size:1rem;position:relative;z-index:1;margin-bottom:14px;}
+    .pullquote cite{display:block;font-style:normal;font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--go);position:relative;z-index:1;}
+    .divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
+    .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
+    .divider span{width:8px;height:8px;border-radius:50%;background:var(--bm);opacity:.4;}
+    .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .art-footer-brand span{color:rgba(255,255,255,.8);}
+    .art-footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;transition:color .2s;}
+    .art-footer-links a:hover{color:#fff;text-decoration:none;}
+    .back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+    .back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--bm);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s,transform .15s;}
+    .back-btn:hover{background:var(--bl);transform:translateY(-1px);text-decoration:none;}
+    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html">&#8592; Página Inicial</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 94</span></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>Política Fiscal Internacional · Junho 2026</div>
+      <h1>Luanda Realiza<br><em>Workshop sobre</em><br>Incentivos Fiscais</h1>
+      <p class="hero-lead">Workshop regional realizado em Angola reuniu especialistas africanos e do Fundo Monetário Internacional para debater transparência, avaliação e boa governação dos benefícios fiscais.</p>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Organização</strong> FMI + AFRITAC Sul</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Duração</strong> 5 dias</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 94 · Junho 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+    <h2><span class="h2i">🌍</span> Incentivos fiscais em debate</h2>
+    <p>Os incentivos fiscais constituem um dos instrumentos mais utilizados pelos Estados para atrair investimento, estimular sectores estratégicos e promover o crescimento económico. Contudo, a sua eficácia depende menos da existência dos benefícios e mais da qualidade da sua concepção, atribuição, monitorização e avaliação. Foi precisamente este desafio que esteve no centro do Workshop Regional sobre Administração de Incentivos Fiscais, realizado em Luanda.</p>
+    <p>Promovido pelo Fundo Monetário Internacional (FMI), em parceria com o AFRITAC Sul, o encontro reuniu representantes de administrações tributárias e ministérios das finanças de vários países africanos, proporcionando um espaço de partilha de experiências sobre governação, transparência e avaliação dos incentivos fiscais.</p>
+
+    <h2><span class="h2i">📋</span> Angola reforça o seu quadro legal</h2>
+    <p>Durante a sessão de abertura, o Secretário de Estado para as Finanças e Tesouro, Ottoniel dos Santos, destacou que Angola deu um passo importante com a aprovação do Código dos Benefícios Fiscais, instrumento que consolidou diversos regimes anteriormente dispersos e reforçou princípios de transparência, monitorização e responsabilização.</p>
+    <p>Ao longo de cinco dias, especialistas analisaram experiências internacionais e discutiram boas práticas de administração dos incentivos fiscais, reforçando a cooperação técnica entre os países da região e promovendo soluções adaptadas aos desafios das economias africanas.</p>
+
+    <h2><span class="h2i">✅</span> 5 princípios essenciais — visão do FMI</h2>
+    <p>Em entrevista à Folha Tributária, Miguel Pecho, Especialista em Administração Tributária do Departamento de Assuntos Fiscais do FMI, partilhou os cinco princípios que considera essenciais para garantir que os incentivos fiscais gerem valor para a economia e para a sociedade.</p>
+
+    <div class="principles-list">
+      <div class="principle">
+        <div class="principle-num">1</div>
+        <div>
+          <div class="principle-title">Os incentivos devem alterar decisões de investimento</div>
+          <p>Um benefício fiscal só se justifica quando influencia efectivamente a decisão de investir e gera resultados económicos mensuráveis, como emprego, produção ou exportações.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">2</div>
+        <div>
+          <div class="principle-title">Benefícios fiscais não substituem um bom ambiente de negócios</div>
+          <p>Estabilidade macroeconómica, segurança jurídica, infra-estrutura, previsibilidade e mão-de-obra qualificada continuam a ser factores determinantes para atrair investimento.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">3</div>
+        <div>
+          <div class="principle-title">Avaliar antes de conceder</div>
+          <p>Cada incentivo deve assentar numa análise custo-benefício que demonstre o retorno esperado para a economia e para a sociedade.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">4</div>
+        <div>
+          <div class="principle-title">Monitorizar durante toda a execução</div>
+          <p>A atribuição do benefício não encerra o processo. O acompanhamento contínuo permite verificar se os compromissos assumidos estão a ser cumpridos.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">5</div>
+        <div>
+          <div class="principle-title">Transparência protege as receitas públicas</div>
+          <p>Regras claras, fiscalização eficaz e mecanismos de controlo reduzem abusos e reforçam a confiança no sistema tributário.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pullquote">
+      <p>A experiência internacional demonstra que incentivos fiscais eficazes dependem menos da dimensão dos benefícios concedidos e mais da qualidade da sua administração. Transparência, avaliação e monitorização constituem pilares indispensáveis para transformar benefícios fiscais em desenvolvimento económico sustentável.</p>
+      <cite>Miguel Pecho — Especialista em Administração Tributária, FMI</cite>
+    </div>
+  </main>
+
+  <div class="back-btn-wrap">
+    <a class="back-btn" href="index.html">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="art-footer">
+    <div class="art-footer-brand">Folha Tributária · <span>Edição N.º 94 | Junho 2026</span></div>
+    <div class="art-footer-links">
+      <a href="index.html">Início</a>
+      <a href="incentivos-internacionais.html">Incentivos Internacionais</a>
+      <a href="irps-cedular.html">IRPS</a>
+      <a href="https://www.agt.minfin.gov.ao" target="_blank">AGT Online</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

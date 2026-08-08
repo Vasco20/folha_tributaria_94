@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Voz do Contribuinte — Portal do Contribuinte | Folha Tributária N.º 94</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Plus Jakarta Sans',-apple-system,sans-serif;--fb:'Inter',-apple-system,sans-serif;--mx:780px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+    .page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+    .nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:100;}
+    .nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+    .nav-back:hover{color:#fff;text-decoration:none;}
+    .nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+    .nav-brand span{color:var(--go);}
+    .hero{background:linear-gradient(150deg,#050f26 0%,#0a1f44 50%,#0b2860 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(36,120,255,.15) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+    .hero-inner{position:relative;z-index:1;}
+    .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#ffd06b;margin-bottom:24px;}
+    .kicker-dot{width:6px;height:6px;border-radius:50%;background:#ffd06b;animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,3rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:560px;}
+    .hero h1 em{font-style:normal;color:var(--go);}
+    .hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;}
+    .art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:32px;}
+    .art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+    .art-meta-item strong{color:rgba(255,255,255,.85);}
+    .art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+    .body{padding:48px 40px 56px;}
+    h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+    h2:first-child{margin-top:0;}
+    .h2i{width:30px;height:30px;border-radius:6px;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+    p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+    .testimony{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:24px;margin-bottom:20px;}
+    .testimony-header{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+    .testimony-avatar{width:48px;height:48px;border-radius:50%;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+    .testimony-name{font-family:var(--fh);font-size:.9rem;font-weight:700;color:var(--tp);}
+    .testimony-role{font-family:var(--fh);font-size:.7rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;}
+    .testimony-quote{font-size:.92rem;color:var(--tp);font-style:italic;border-left:3px solid var(--bm);padding-left:14px;line-height:1.65;}
+    .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0;}
+    @media(max-width:540px){.summary-grid{grid-template-columns:1fr;}}
+    .summary-box{border-radius:14px;padding:22px 20px;}
+    .summary-box.green{background:#edfaf4;border:1px solid #b2e8cf;}
+    .summary-box.red{background:#fff0f0;border:1px solid #f7bfbf;}
+    .summary-box-title{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px;}
+    .summary-box.green .summary-box-title{color:#14855a;}
+    .summary-box.red .summary-box-title{color:#c0392b;}
+    .summary-box ul{display:flex;flex-direction:column;gap:8px;}
+    .summary-box li{font-size:.88rem;color:var(--tp);display:flex;align-items:flex-start;gap:8px;}
+    .summary-box.green li::before{content:'✓';color:var(--gn);font-weight:700;flex-shrink:0;}
+    .summary-box.red li::before{content:'→';color:#c0392b;font-weight:700;flex-shrink:0;}
+    .divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
+    .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
+    .divider span{width:8px;height:8px;border-radius:50%;background:var(--bm);opacity:.4;}
+    .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+    .art-footer-brand span{color:rgba(255,255,255,.8);}
+    .art-footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+    .art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;transition:color .2s;}
+    .art-footer-links a:hover{color:#fff;text-decoration:none;}
+    .back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+    .back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--bm);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s,transform .15s;}
+    .back-btn:hover{background:var(--bl);transform:translateY(-1px);text-decoration:none;}
+    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}}
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html">&#8592; Página Inicial</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 94</span></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>A Voz do Contribuinte · Junho 2026</div>
+      <h1>Portal do Contribuinte:<br><em>Avanços Reconhecidos,</em><br>Desafios Identificados</h1>
+      <p class="hero-lead">Utilizadores destacam a comodidade e a facilidade de acesso aos serviços digitais da AGT, mas defendem melhorias no desempenho da plataforma e o alargamento das funcionalidades disponíveis.</p>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Rubrica</strong> A Voz do Contribuinte</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Tema</strong> Portal do Contribuinte</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 94 · Junho 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="body">
+    <p>O Portal do Contribuinte consolidou-se como um dos principais canais digitais da Administração Geral Tributária, permitindo aos cidadãos realizar diversos procedimentos fiscais sem necessidade de deslocação às repartições. Os testemunhos recolhidos pela Folha Tributária revelam uma avaliação globalmente positiva da plataforma, embora identifiquem oportunidades de melhoria.</p>
+
+    <h2><span class="h2i">🗣️</span> Testemunhos dos utilizadores</h2>
+
+    <div class="testimony">
+      <div class="testimony-header">
+        <div class="testimony-avatar">👨</div>
+        <div>
+          <div class="testimony-name">Edemiro Manuel</div>
+          <div class="testimony-role">Chefe de Sala de Restauração</div>
+        </div>
+      </div>
+      <div class="testimony-quote">"Muitas pessoas ainda não sabem que podem efectuar pagamentos e realizar diversos procedimentos através do Portal do Contribuinte."</div>
+      <p style="margin-top:12px;font-size:.88rem;color:var(--tm);">Considera o Portal simples de utilizar e uma ferramenta que facilita o acesso aos serviços fiscais. Defende que a plataforma deve ser mais divulgada para que um maior número de contribuintes conheça todas as suas funcionalidades.</p>
+    </div>
+
+    <div class="testimony">
+      <div class="testimony-header">
+        <div class="testimony-avatar">💻</div>
+        <div>
+          <div class="testimony-name">Alfredo Huma</div>
+          <div class="testimony-role">Técnico Informático</div>
+        </div>
+      </div>
+      <div class="testimony-quote">"As principais dificuldades estão relacionadas com a lentidão da plataforma em determinados momentos e com falhas ocasionais no acesso."</div>
+      <p style="margin-top:12px;font-size:.88rem;color:var(--tm);">Reconhece a utilidade da plataforma para a realização de procedimentos fiscais, mas entende que a experiência do utilizador pode ser melhorada através de maior estabilidade e rapidez do sistema.</p>
+    </div>
+
+    <div class="testimony">
+      <div class="testimony-header">
+        <div class="testimony-avatar">👔</div>
+        <div>
+          <div class="testimony-name">José Gomes</div>
+          <div class="testimony-role">Técnico de Recursos Humanos</div>
+        </div>
+      </div>
+      <div class="testimony-quote">"Seria importante melhorar o desempenho da plataforma nos períodos de maior procura."</div>
+      <p style="margin-top:12px;font-size:.88rem;color:var(--tm);">Faz uma avaliação globalmente positiva do Portal do Contribuinte e considera que a plataforma reúne a informação essencial para os cidadãos.</p>
+    </div>
+
+    <h2><span class="h2i">📊</span> Em síntese</h2>
+
+    <div class="summary-grid">
+      <div class="summary-box green">
+        <div class="summary-box-title">✦ Em síntese</div>
+        <ul>
+          <li>Facilidade de acesso</li>
+          <li>Comodidade na utilização</li>
+          <li>Redução das deslocações</li>
+          <li>Crescimento dos serviços digitais</li>
+        </ul>
+      </div>
+      <div class="summary-box red">
+        <div class="summary-box-title">→ Principais sugestões</div>
+        <ul>
+          <li>Melhorar o desempenho nos períodos de maior procura</li>
+          <li>Alargar as funcionalidades disponíveis</li>
+          <li>Reforçar a divulgação do Portal</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>A Administração Geral Tributária tem vindo a implementar diversas medidas para modernizar e melhorar continuamente o Portal do Contribuinte. Entre as principais iniciativas destacam-se a digitalização dos serviços tributários, a simplificação dos procedimentos, a integração de novas funcionalidades e o reforço da segurança informática. O objectivo é fortalecer a relação de confiança entre a Administração Tributária e os contribuintes, promovendo uma cultura de cumprimento voluntário das obrigações fiscais.</p>
+  </main>
+
+  <div class="back-btn-wrap">
+    <a class="back-btn" href="index.html">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="art-footer">
+    <div class="art-footer-brand">Folha Tributária · <span>Edição N.º 94 | Junho 2026</span></div>
+    <div class="art-footer-links">
+      <a href="index.html">Início</a>
+      <a href="declaracoes-zeradas.html">Declarações Zeradas</a>
+      <a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank">Portal do Contribuinte</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
