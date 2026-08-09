@@ -46,7 +46,11 @@
     .answer ul{margin:12px 0 14px 20px;display:flex;flex-direction:column;gap:8px;}
     .answer ul li{font-size:.95rem;color:var(--tp);line-height:1.6;}
     .profile-badge{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:18px;}
-    .profile-avatar{width:56px;height:56px;border-radius:50%;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+    .profile-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#eef4ff,#dfeaff);border:1px solid rgba(18,70,160,.18);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;position:relative;}
+    .profile-avatar img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .2s ease;}
+    .profile-avatar.placeholder::after{content:'FOTO';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:.52rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(10,31,68,.55);}
+    .profile-avatar img[src]{opacity:1;}
+    .profile-avatar img:not([src]), .profile-avatar img[src=""]{display:none;}
     .profile-name{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--tp);}
     .profile-role{font-family:var(--fh);font-size:.72rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
     .pullquote{background:linear-gradient(135deg,var(--bd) 0%,#0d2d6b 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
@@ -58,6 +62,17 @@
     .info-box ul{display:flex;flex-direction:column;gap:6px;}
     .info-box li{font-size:.9rem;color:var(--tp);display:flex;align-items:flex-start;gap:8px;}
     .info-box li::before{content:'▸';color:var(--bm);font-size:.75rem;margin-top:2px;flex-shrink:0;}
+    .gallery-section{margin-top:18px;}
+    .gallery-shell{position:relative;}
+    .gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding:8px 4px 14px;cursor:grab;user-select:none;-ms-overflow-style:none;scrollbar-width:none;touch-action:pan-y;}
+    .gallery-track::-webkit-scrollbar{display:none;}
+    .gallery-track.dragging{cursor:grabbing;}
+    .gallery-slide{flex:0 0 82%;max-width:82%;background:var(--sf);border:1px solid var(--br);border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(10,31,68,.08);scroll-snap-align:start;}
+    .gallery-slide img{display:block;width:100%;height:200px;object-fit:cover;object-position:center;aspect-ratio:300 / 200;}
+    .gallery-hint{margin-top:10px;color:var(--tm);font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;font-family:var(--fh);font-weight:700;display:flex;align-items:center;gap:8px;}
+    .gallery-hint::before{content:'↔';font-size:1rem;color:var(--bm);}
+    @media(min-width:700px){.gallery-slide{flex-basis:48%;max-width:48%;}.gallery-slide img{height:240px;}}
+    @media(max-width:600px){.gallery-slide{flex-basis:82%;max-width:82%;}.gallery-slide img{height:200px;}}
     .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
     .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
     .art-footer-brand span{color:rgba(255,255,255,.8);}
@@ -94,7 +109,9 @@
 
   <main class="body">
     <div class="profile-badge">
-      <div class="profile-avatar">🌍</div>
+      <div class="profile-avatar placeholder" aria-label="Foto de Miguel Pecho">
+        <img src="imag/miguel-pecho.webp" alt="Foto de Miguel Pecho" />
+      </div>
       <div>
         <div class="profile-name">Miguel Pecho</div>
         <div class="profile-role">Especialista em Administração Tributária — Departamento de Assuntos Fiscais, FMI</div>
@@ -142,6 +159,41 @@
       </div>
     </div>
 
+    <div class="qa-block">
+      <div class="question">Qual é a diferença entre incentivos fiscais e despesa fiscal, e por que é que esta distinção é importante?</div>
+      <div class="answer">
+        <p>Os incentivos fiscais equivalem a uma forma de despesa pública indirecta, porque representam receitas que o Estado deixa de arrecadar em troca de um objectivo específico, normalmente a promoção de investimento ou o desenvolvimento de determinados sectores económicos.</p>
+        <p>É importante distinguir estes conceitos porque a análise de custo-benefício não pode limitar-se ao valor do incentivo concedido, mas também deve considerar o efeito económico real, a capacidade de gerar valor acrescentado, emprego e receitas indiretas para o Estado. Se a despesa fiscal não gera impacto positivo suficiente, o benefício deixa de ser justificável.</p>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">Que elementos fazem um sistema de incentivos fiscais ser eficaz e sustentável?</div>
+      <div class="answer">
+        <p>Um sistema eficaz exige quatro condições fundamentais: clareza jurídica, avaliação prévia, monitorização contínua e transparência. Não basta criar um regime com boas intenções; é necessário assegurar que todas as regras são conhecidas, que os critérios de concessão são objectivos e que os impactos são medidos ao longo do tempo.</p>
+        <p>Na prática, isto significa que cada incentivo deve ter objectivos explícitos, prazo definido, beneficiários identificados, indicadores de desempenho e mecanismos de revisão que permitam alterar ou encerrar regimes que deixem de criar valor económico ou social. Sem estas condições, a concessão de benefícios fiscais corre o risco de se transformar num mecanismo pouco transparente, pouco eficiente e potencialmente prejudicial para o sistema fiscal nacional.</p>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question">Qual é a principal lição que Angola pode retirar do debate internacional sobre incentivos fiscais?</div>
+      <div class="answer">
+        <p>A principal lição é simples: os incentivos fiscais não devem ser vistos como uma recompensa automática ao investimento, mas como uma ferramenta estratégica que exige disciplina, transparência e rigor na administração pública. Quando bem concebidos, podem apoiar sectores prioritários e melhorar a competitividade do País; quando mal desenhados, provocam erosão de receitas e enfraquecem a equidade fiscal.</p>
+        <p>Angola avançou com a consolidação do quadro legal via Código dos Benefícios Fiscais, mas o momento mais importante ainda está por vir: transformar esse quadro numa ferramenta de política pública de alta qualidade, com avaliação permanente, bom acompanhamento e resultados mensuráveis. É assim que os benefícios fiscais deixam de ser apenas um instrumento de promoção e passam a ser um mecanismo de desenvolvimento económico sustentável.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-box-title">Cinco princípios essenciais para uma política de incentivos fiscais eficaz</div>
+      <ul>
+        <li>Os incentivos devem alterar decisões de investimento, não apenas recompensar comportamentos que já aconteceriam.</li>
+        <li>Os benefícios fiscais não podem substituir a qualidade do ambiente de negócios: infraestruturas, segurança jurídica e previsibilidade são essenciais.</li>
+        <li>É necessário avaliar antes de conceder e monitorizar após a concessão.</li>
+        <li>Regras transparentes e mecanismos de controlo reduzem a discricionariedade e reforçam a confiança pública.</li>
+        <li>O custo fiscal deve ser sempre comparado com os ganhos económicos e sociais reais para a sociedade.</li>
+      </ul>
+    </div>
+
     <div class="info-box">
       <div class="info-box-title">Referências internacionais citadas</div>
       <ul>
@@ -150,6 +202,27 @@
         <li>Código dos Benefícios Fiscais de Angola (instrumento de consolidação e transparência)</li>
         <li>Boas práticas da OCDE sobre despesa fiscal e avaliação de impacto</li>
       </ul>
+    </div>
+
+    <div class="gallery-section">
+      <h2><span class="h2i">📷</span> Galeria do workshop</h2>
+      <div class="gallery-shell">
+        <div class="gallery-track" aria-label="Galeria de imagens do workshop sobre incentivos fiscais">
+          <article class="gallery-slide">
+            <img src="imag/1i.webp" alt="Participantes em reunião internacional sobre incentivos fiscais" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/2i.webp" alt="Pessoas em discussão sobre políticas fiscais" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/3i.webp" alt="Delegados em painel internacional" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/4i.webp" alt="Trabalho em equipa em debate fiscal" />
+          </article>
+        </div>
+        <div class="gallery-hint">Arraste para ver mais imagens</div>
+      </div>
     </div>
   </main>
 
@@ -167,5 +240,45 @@
     </div>
   </footer>
 </div>
+
+<script>
+  const galleryTrack = document.querySelector('.gallery-track');
+  if (galleryTrack) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    galleryTrack.addEventListener('pointerdown', (event) => {
+      isDown = true;
+      galleryTrack.classList.add('dragging');
+      startX = event.pageX - galleryTrack.offsetLeft;
+      scrollLeft = galleryTrack.scrollLeft;
+      galleryTrack.setPointerCapture(event.pointerId);
+    });
+
+    galleryTrack.addEventListener('pointerleave', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointerup', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointercancel', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointermove', (event) => {
+      if (!isDown) return;
+      event.preventDefault();
+      const x = event.pageX - galleryTrack.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      galleryTrack.scrollLeft = scrollLeft - walk;
+    });
+  }
+</script>
 </body>
 </html>

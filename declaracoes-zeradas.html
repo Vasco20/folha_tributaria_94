@@ -38,7 +38,11 @@
     .h2i{width:30px;height:30px;border-radius:6px;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
     p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
     .profile-badge{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:20px 24px;margin-bottom:40px;display:flex;align-items:center;gap:18px;}
-    .profile-avatar{width:56px;height:56px;border-radius:50%;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+    .profile-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#eef4ff,#dfeaff);border:1px solid rgba(18,70,160,.18);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;position:relative;}
+    .profile-avatar img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .2s ease;}
+    .profile-avatar.placeholder::after{content:'FOTO';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:.52rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(10,31,68,.55);}
+    .profile-avatar img[src]{opacity:1;}
+    .profile-avatar img:not([src]), .profile-avatar img[src=""]{display:none;}
     .profile-name{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--tp);}
     .profile-role{font-family:var(--fh);font-size:.72rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
     .pullquote{background:linear-gradient(135deg,var(--bd) 0%,#0d2d6b 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
@@ -96,7 +100,9 @@
 
   <main class="body">
     <div class="profile-badge">
-      <div class="profile-avatar">✍️</div>
+      <div class="profile-avatar placeholder" aria-label="Foto do Dr. Benjamim Dumba">
+        <img src="" alt="Foto do Dr. Benjamim Dumba" />
+      </div>
       <div>
         <div class="profile-name">Dr. Benjamim Dumba</div>
         <div class="profile-role">Artigo de Opinião — Folha Tributária N.º 94</div>

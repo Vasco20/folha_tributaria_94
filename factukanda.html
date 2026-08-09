@@ -73,7 +73,17 @@
     .back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
     .back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--bm);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s,transform .15s;}
     .back-btn:hover{background:var(--bl);transform:translateY(-1px);text-decoration:none;}
-    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}.stats-bar{grid-template-columns:repeat(2,1fr);}}
+    .gallery-section{margin-top:36px;}
+    .gallery-shell{position:relative;}
+    .gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding:8px 4px 14px;cursor:grab;user-select:none;-ms-overflow-style:none;scrollbar-width:none;touch-action:pan-y;}
+    .gallery-track::-webkit-scrollbar{display:none;}
+    .gallery-track.dragging{cursor:grabbing;}
+    .gallery-slide{flex:0 0 82%;max-width:82%;background:var(--sf);border:1px solid var(--br);border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(10,31,68,.08);scroll-snap-align:start;}
+    .gallery-slide img{display:block;width:100%;height:200px;object-fit:cover;object-position:center;aspect-ratio:300 / 200;}
+    .gallery-hint{margin-top:10px;color:var(--tm);font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;font-family:var(--fh);font-weight:700;display:flex;align-items:center;gap:8px;}
+    .gallery-hint::before{content:'↔';font-size:1rem;color:var(--bm);}
+    @media(min-width:700px){.gallery-slide{flex-basis:48%;max-width:48%;}.gallery-slide img{height:240px;}}
+    @media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}.stats-bar{grid-template-columns:repeat(2,1fr);}.gallery-slide{flex-basis:82%;max-width:82%;}.gallery-slide img{height:200px;}}
   </style>
 </head>
 <body>
@@ -143,6 +153,39 @@
         <li>O próximo Encontro Inter-Regional terá lugar na 7.ª Região Tributária, Lunda-Sul, em 2027.</li>
       </ul>
     </div>
+
+    <div class="gallery-section">
+      <h2><span class="h2i">📷</span> Galeria da FACTUKANDA</h2>
+      <div class="gallery-shell">
+        <div class="gallery-track" aria-label="Galeria de imagens da FACTUKANDA">
+          <article class="gallery-slide">
+            <img src="imag/1.webp" alt="Crianças a participarem na FACTUKANDA" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/2.webp" alt="Atividades pedagógicas para crianças" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/3.webp" alt="Grupo de crianças em aprendizagem coletiva" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/4.webp" alt="Participantes em circuito educativo" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/5.webp" alt="Crianças durante visita guiada" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/6.webp" alt="Ativação de temas fiscais com crianças" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/7.webp" alt="Crianças em atividades lúdicas" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/8.webp" alt="Fecho da edição FACTUKANDA" />
+          </article>
+        </div>
+        <div class="gallery-hint">Arraste para ver mais imagens</div>
+      </div>
+    </div>
   </main>
 
   <div class="back-btn-wrap">
@@ -159,5 +202,45 @@
     </div>
   </footer>
 </div>
+
+<script>
+  const galleryTrack = document.querySelector('.gallery-track');
+  if (galleryTrack) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    galleryTrack.addEventListener('pointerdown', (event) => {
+      isDown = true;
+      galleryTrack.classList.add('dragging');
+      startX = event.pageX - galleryTrack.offsetLeft;
+      scrollLeft = galleryTrack.scrollLeft;
+      galleryTrack.setPointerCapture(event.pointerId);
+    });
+
+    galleryTrack.addEventListener('pointerleave', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointerup', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointercancel', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointermove', (event) => {
+      if (!isDown) return;
+      event.preventDefault();
+      const x = event.pageX - galleryTrack.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      galleryTrack.scrollLeft = scrollLeft - walk;
+    });
+  }
+</script>
 </body>
 </html>
