@@ -49,6 +49,22 @@
     .divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
     .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
     .divider span{width:8px;height:8px;border-radius:50%;background:var(--bm);opacity:.4;}
+    .info-box{background:var(--s2);border:1px solid var(--br);border-left:4px solid var(--bm);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+    .info-box-title{font-family:var(--fh);font-size:.75rem;font-weight:700;color:var(--bm);letter-spacing:.07em;text-transform:uppercase;margin-bottom:10px;}
+    .info-box ul{display:flex;flex-direction:column;gap:6px;list-style:none;}
+    .info-box li{font-size:.9rem;color:var(--tp);display:flex;align-items:flex-start;gap:8px;line-height:1.6;}
+    .info-box li::before{content:'▸';color:var(--bm);font-size:.75rem;margin-top:2px;flex-shrink:0;}
+    .gallery-section{margin-top:18px;}
+    .gallery-shell{position:relative;}
+    .gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding:8px 4px 14px;cursor:grab;user-select:none;-ms-overflow-style:none;scrollbar-width:none;touch-action:pan-y;}
+    .gallery-track::-webkit-scrollbar{display:none;}
+    .gallery-track.dragging{cursor:grabbing;}
+    .gallery-slide{flex:0 0 82%;max-width:82%;background:var(--sf);border:1px solid var(--br);border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(10,31,68,.08);scroll-snap-align:start;}
+    .gallery-slide img{display:block;width:100%;height:210px;object-fit:cover;object-position:center;aspect-ratio:300 / 200;}
+    .gallery-hint{margin-top:10px;color:var(--tm);font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;font-family:var(--fh);font-weight:700;display:flex;align-items:center;gap:8px;}
+    .gallery-hint::before{content:'↔';font-size:1rem;color:var(--bm);}
+    @media(min-width:700px){.gallery-slide{flex-basis:48%;max-width:48%;}.gallery-slide img{height:240px;}}
+    @media(max-width:600px){.gallery-slide{flex-basis:82%;max-width:82%;}.gallery-slide img{height:200px;}}
     .art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
     .art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
     .art-footer-brand span{color:rgba(255,255,255,.8);}
@@ -137,6 +153,43 @@
       <p>A experiência internacional demonstra que incentivos fiscais eficazes dependem menos da dimensão dos benefícios concedidos e mais da qualidade da sua administração. Transparência, avaliação e monitorização constituem pilares indispensáveis para transformar benefícios fiscais em desenvolvimento económico sustentável.</p>
       <cite>Miguel Pecho — Especialista em Administração Tributária, FMI</cite>
     </div>
+
+    <h2><span class="h2i">🧭</span> O que foi debatido no workshop</h2>
+    <p>Durante os cinco dias de trabalho em Luanda, o evento reuniu autoridades fiscais, especialistas internacionais e técnicos de vários países africanos para discutir como melhorar a governação dos incentivos fiscais e garantir que os benefícios concedidos tenham impacto real na economia.</p>
+    <p>O foco central foi a necessidade de adaptar os regimes de benefícios fiscais ao contexto nacional, sem perder de vista as exigências de transparência, avaliação de impacto e responsabilidade pública. A discussão colocou em evidência que a concessão de isenções ou reduções fiscais só faz sentido quando estas estão alinhadas com objetivos claros de investimento, produção, emprego e desenvolvimento sustentável.</p>
+    <p>Em vários casos, os participantes sublinharam que muitos países costumam usar incentivos como instrumento de política de atracção ao investimento, mas sem mecanismos adequados de monitorização. Isto gera risco de perda de receitas, concentração de benefícios em poucos agentes e pouca capacidade de aferir se a política realmente gerou valor para a sociedade.</p>
+
+    <div class="info-box">
+      <div class="info-box-title">Pontos centrais do debate</div>
+      <ul>
+        <li>Qualidade da concepção dos incentivos e alinhamento com objetivos de desenvolvimento.</li>
+        <li>Necessidade de avaliação prévia e de monitorização contínua ao longo da vigência do regime.</li>
+        <li>Importância da transparência para reduzir discricionariedade e reforçar a confiança pública.</li>
+        <li>Relação entre benefícios fiscais e ambiente de negócios, infraestruturas, estabilidade jurídica e competitividade.</li>
+        <li>Uso de indicadores claros para medir resultados reais em emprego, produção e receitas fiscais.</li>
+      </ul>
+    </div>
+
+    <h2><span class="h2i">📷</span> Galeria do workshop</h2>
+    <div class="gallery-section">
+      <div class="gallery-shell">
+        <div class="gallery-track" aria-label="Galeria de imagens do workshop sobre incentivos fiscais">
+          <article class="gallery-slide">
+            <img src="imag/1i.webp" alt="Participantes em reunião internacional sobre incentivos fiscais" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/2i.webp" alt="Pessoas em discussão sobre políticas fiscais" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/3i.webp" alt="Delegados em painel internacional" />
+          </article>
+          <article class="gallery-slide">
+            <img src="imag/4i.webp" alt="Trabalho em equipa em debate fiscal" />
+          </article>
+        </div>
+        <div class="gallery-hint">Arraste para ver mais imagens</div>
+      </div>
+    </div>
   </main>
 
   <div class="back-btn-wrap">
@@ -153,5 +206,40 @@
     </div>
   </footer>
 </div>
+
+<script>
+  const galleryTrack = document.querySelector('.gallery-track');
+  if (galleryTrack) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    galleryTrack.addEventListener('pointerdown', (event) => {
+      isDown = true;
+      galleryTrack.classList.add('dragging');
+      startX = event.pageX - galleryTrack.offsetLeft;
+      scrollLeft = galleryTrack.scrollLeft;
+      galleryTrack.setPointerCapture(event.pointerId);
+    });
+
+    galleryTrack.addEventListener('pointerleave', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointerup', () => {
+      isDown = false;
+      galleryTrack.classList.remove('dragging');
+    });
+
+    galleryTrack.addEventListener('pointermove', (event) => {
+      if (!isDown) return;
+      event.preventDefault();
+      const x = event.pageX - galleryTrack.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      galleryTrack.scrollLeft = scrollLeft - walk;
+    });
+  }
+</script>
 </body>
 </html>
