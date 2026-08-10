@@ -75,7 +75,7 @@
     .back-btn:hover{background:var(--bl);transform:translateY(-1px);text-decoration:none;}
     .gallery-section{margin-top:36px;}
     .gallery-shell{position:relative;}
-    .gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding:8px 4px 14px;cursor:grab;user-select:none;-ms-overflow-style:none;scrollbar-width:none;touch-action:pan-y;}
+    .gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x proximity;padding:8px 4px 14px;cursor:grab;user-select:none;-ms-overflow-style:none;scrollbar-width:none;touch-action:pan-x;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;}
     .gallery-track::-webkit-scrollbar{display:none;}
     .gallery-track.dragging{cursor:grabbing;}
     .gallery-slide{flex:0 0 82%;max-width:82%;background:var(--sf);border:1px solid var(--br);border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(10,31,68,.08);scroll-snap-align:start;}
